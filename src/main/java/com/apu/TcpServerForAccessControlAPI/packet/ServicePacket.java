@@ -2,9 +2,38 @@ package com.apu.TcpServerForAccessControlAPI.packet;
 
 public class ServicePacket extends RawPacket {
     
-    MessageType messageType = MessageType.SERVICE;
-    EventType   eventType;
-    Integer     eventId;
-    String      info;
+    private static final long serialVersionUID = 1L;
+    private MessageType messageType = MessageType.SERVICE;
+    private EventType   eventType;
+    private Integer     eventId;
+    private String      info;
+    
+    public MessageType getMessageType() {
+        return messageType;
+    }
+    public void setMessageType(MessageType messageType) {
+        this.messageType = messageType;
+    }
+    public EventType getEventType() {
+        return eventType;
+    }
+    public void setEventType(EventType eventType) {
+        this.eventType = eventType;
+    }
+    public Integer getEventId() {
+        return eventId;
+    }
+    public void setEventId(Integer eventId) {
+        this.eventId = eventId;
+    }
+    public String getInfo() {
+        return info;
+    }
+    public void setInfo(String info) {
+        this.info = info;
+    }
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
     
 }
