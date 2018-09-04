@@ -6,16 +6,16 @@ import java.util.Date;
 public class RawPacket implements Serializable {
     
     private static final long serialVersionUID = 1L;
-    private Integer     deviceId;
+    private Integer     deviceNumber;
     private Integer     packetNumber;
     private MessageType messageType;    
     private Date        time;
     
-    public Integer getDeviceId() {
-        return deviceId;
+    public Integer getDeviceNumber() {
+        return deviceNumber;
     }
-    public void setDeviceId(Integer deviceId) {
-        this.deviceId = deviceId;
+    public void setDeviceNumber(Integer deviceNumber) {
+        this.deviceNumber = deviceNumber;
     }
     public Integer getPacketNumber() {
         return packetNumber;
