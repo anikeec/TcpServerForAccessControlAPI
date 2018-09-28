@@ -1,5 +1,8 @@
 package com.apu.TcpServerForAccessControlAPI.packet;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+@JsonTypeName("servicePacket")
 public class ServicePacket extends RawPacket {
     
     private static final long serialVersionUID = 1L;
