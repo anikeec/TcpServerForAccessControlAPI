@@ -3,23 +3,18 @@ package com.apu.TcpServerForAccessControlAPI.packet;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.google.gson.annotations.Expose;
 
-@JsonTypeInfo(
-        use = JsonTypeInfo.Id.NAME, 
-        include = JsonTypeInfo.As.PROPERTY, 
-        property = "type")
-      @JsonSubTypes({
-          @JsonSubTypes.Type(value = AccessPacket.class, name = "accessPacket"),
-          @JsonSubTypes.Type(value = ServicePacket.class, name = "servicePacket")
-      })
 public class RawPacket implements Serializable {
     
     private static final long serialVersionUID = 1L;
-    private Integer     deviceNumber;
-    private Integer     packetNumber;
+//    @Expose (serialize = false, deserialize = false)
     private MessageType messageType;    
+    @Expose
+    private Integer     deviceNumber;
+    @Expose
+    private Integer     packetNumber;    
+    @Expose
     private Date        time;
     
     public Integer getDeviceNumber() {

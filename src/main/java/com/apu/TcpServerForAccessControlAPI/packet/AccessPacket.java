@@ -1,14 +1,17 @@
 package com.apu.TcpServerForAccessControlAPI.packet;
 
-import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.google.gson.annotations.Expose;
 
-@JsonTypeName("accessPacket")
 public class AccessPacket extends RawPacket {
     
     private static final long serialVersionUID = 1L;
+    @Expose
     private MessageType messageType = MessageType.ACCESS;
+    @Expose
     private String      cardNumber;
+    @Expose
     private EventType   eventType;
+    @Expose
     private Integer     eventId;
     
     

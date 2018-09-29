@@ -1,14 +1,17 @@
 package com.apu.TcpServerForAccessControlAPI.packet;
 
-import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.google.gson.annotations.Expose;
 
-@JsonTypeName("servicePacket")
 public class ServicePacket extends RawPacket {
     
     private static final long serialVersionUID = 1L;
+    @Expose
     private MessageType messageType = MessageType.SERVICE;
+    @Expose
     private EventType   eventType;
+    @Expose
     private Integer     eventId;
+    @Expose
     private String      info;
     
     public MessageType getMessageType() {

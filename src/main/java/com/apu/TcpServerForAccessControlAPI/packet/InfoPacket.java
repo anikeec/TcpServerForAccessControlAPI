@@ -1,13 +1,21 @@
 package com.apu.TcpServerForAccessControlAPI.packet;
 
+import com.google.gson.annotations.Expose;
+
 public class InfoPacket extends RawPacket {
     
     private static final long serialVersionUID = 1L;
+    @Expose
     private MessageType messageType = MessageType.INFO;
+    @Expose
     private String      cardNumber;
+    @Expose
     private Integer     userId;       
+    @Expose
     private EventType   eventType;
+    @Expose
     private Integer     eventId;
+    @Expose
     private String      info;    
     
     public InfoPacket() {
