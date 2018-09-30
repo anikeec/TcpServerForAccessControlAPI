@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class RawPacket implements Serializable {
     
@@ -11,10 +12,13 @@ public class RawPacket implements Serializable {
 //    @Expose (serialize = false, deserialize = false)
     private MessageType messageType;    
     @Expose
+    @SerializedName("dn")
     private Integer     deviceNumber;
     @Expose
+    @SerializedName("pn")
     private Integer     packetNumber;    
     @Expose
+    @SerializedName("t")
     private Date        time;
     
     public Integer getDeviceNumber() {

@@ -1,17 +1,22 @@
 package com.apu.TcpServerForAccessControlAPI.packet;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class AccessPacket extends RawPacket {
     
     private static final long serialVersionUID = 1L;
     @Expose
+    @SerializedName("mt")
     private MessageType messageType = MessageType.ACCESS;
     @Expose
+    @SerializedName("cn")
     private String      cardNumber;
     @Expose
+    @SerializedName("et")
     private EventType   eventType;
     @Expose
+    @SerializedName("ei")
     private Integer     eventId;
     
     
