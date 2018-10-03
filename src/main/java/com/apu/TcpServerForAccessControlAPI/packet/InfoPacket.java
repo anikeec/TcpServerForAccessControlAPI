@@ -28,8 +28,10 @@ public class InfoPacket extends RawPacket {
     public InfoPacket() {
         super();
     }
-    public InfoPacket(String info) {
+    public InfoPacket(Integer deviceNumber, Integer packetNumber, String info) {
         super();
+        this.setDeviceNumber(deviceNumber);
+        this.setPacketNumber(packetNumber);
         this.info = info;
     }
     public MessageType getMessageType() {
